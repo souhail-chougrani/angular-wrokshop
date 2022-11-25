@@ -1,4 +1,5 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-auth-remembre-me',
@@ -7,7 +8,7 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
   `
 })
 export class AuthRemembreMeComponent implements OnInit {
-  @Output() remember = new EventEmitter<any>();
+  @Output() remember = new EventEmitter<MatSlideToggleChange>();
   constructor() { }
 
   ngOnInit(): void {

@@ -9,9 +9,9 @@ export class AppComponent {
   title = 'appName';
 
   login($event:any){
-    console.log($event)
+    console.log('loging',$event)
   }
   createUser($event:any){
-    console.log($event)
+    console.log('create account',$event)
   }
 }

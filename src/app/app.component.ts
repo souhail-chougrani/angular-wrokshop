@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appName';
+
+  login($event:any){
+    console.log($event)
+  }
+  createUser($event:any){
+    console.log($event)
+  }
 }

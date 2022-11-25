@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthFormComponent } from './auth-form/auth-form.component';
+import { AuthFormModule } from './auth-form/auth-form.module';
 import { AngularMaterialModule } from './angular-material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AuthFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

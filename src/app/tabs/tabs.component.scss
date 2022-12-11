@@ -1,0 +1,80 @@
+//mixins
+@mixin transition-mix ($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $timing;
+    transition-delay: $delay;
+  }
+
+  
+  //variables
+  $theme-font-color: #2c2c2c;
+  $panels-bg-color: rgba(0,0,0,.15);
+  $tabs-padding: 15px;
+  $theme-accent-color: #119DA4;
+
+  
+  //content styles
+  .content {
+    max-width: 700px;
+    margin: 30px auto;
+  }
+  
+  
+  .content__inner {
+    width: 375px;
+    margin: auto;
+    box-shadow: 
+      0 8px 17px 2px rgba(0,0,0,0.14), 
+      0 3px 14px 2px rgba(0,0,0,0.12), 
+      0 5px 5px -3px rgba(0,0,0,0.2);
+  }
+  
+  //tabs styles
+  
+  .tabs {
+    position: relative;
+    padding: $tabs-padding;
+    height: 100%;
+  }
+  
+  //tabs nav styles
+  
+  .tabs__nav {
+    position: relative;
+  }
+  
+  .tabs__nav-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-inline-start: 0;
+    z-index: 5;
+  }
+  
+  .tabs__nav-item {
+    @include transition-mix($delay: 0s);
+    padding: 15px;
+    cursor: pointer;
+    
+    //active styles
+    &.active {
+      @include transition-mix($delay: .05s);
+      color: #fff;
+      background-color: $theme-accent-color;
+      border-radius: 3px;
+    }
+  }
+  
+  
+  .tabs__panels {
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  .tabs__panel {
+    width: 100%;
+  }
+  
+  

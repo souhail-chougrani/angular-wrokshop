@@ -1,0 +1,24 @@
+<div class="stock-counter mat-elevation-z1">
+    <div>
+      <div>
+        <p>{{ value }}</p>
+        <div>
+          <button 
+            class="top" 
+            type="button"
+            (click)="increment()"
+            [disabled]="value === max">
+            +
+          </button>
+          <button
+            class="bottom" 
+            type="button"
+            (click)="decrement()"
+            [disabled]="value === min">
+            -
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+

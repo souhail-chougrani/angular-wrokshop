@@ -1,0 +1,13 @@
+.stock-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .seclector{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,48 @@
+:host{
+    margin-bottom: 1rem;
+    
+}
+
+.stock-counter {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &>div>div {
+        display: flex;
+        align-items: center;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        width: 70px;
+        margin-bottom: 0;
+    }
+
+    button {
+        outline: 0;
+        border-radius: 0;
+        line-height: 1;
+        padding: 6px 11px;
+        background: #3f51b5;
+        color: #fff;
+        font-weight: 500;
+        border: 0;
+        &:hover{
+            background: darken(#3f51b5,10%);
+        }
+        &:disabled {
+            background: rgba(0, 0, 0, 0.1);
+            color: rgba(0, 0, 0, 0.4);
+            border: 0;
+        }
+    }
+}
+

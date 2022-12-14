@@ -1,0 +1,15 @@
+.stock-product-unit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name{
+    flex: 1 1 25%
+}
+.price{
+    flex: 1 1 25%
+}
+.quantity{
+    flex: 1 1 25%
+}

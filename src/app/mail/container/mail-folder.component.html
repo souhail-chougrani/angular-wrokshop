@@ -1,0 +1,5 @@
+<mat-toolbar>
+    <h2>Mail</h2>
+</mat-toolbar>
+<mail-item *ngFor="let message of (messages$ | async)" [message]="message">
+</mail-item>

@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    height: 100%;
+    .mail-primary{
+        flex: 1 1 60%;
+    }
+    .mail-secondary{
+        flex: 1 1 40%;
+    }
+}

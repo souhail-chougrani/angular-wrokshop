@@ -11,7 +11,4 @@ export class AppComponent {
   login($event:any){
     console.log('loging',$event)
   }
-  createUser($event:any){
-    console.log('create account',$event)
-  }
 }

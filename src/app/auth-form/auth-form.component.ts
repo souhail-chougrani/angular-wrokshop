@@ -10,6 +10,7 @@ export class AuthFormComponent implements OnInit {
   @Output()
   submited:EventEmitter<any> = new EventEmitter<any>();
   logingForm!:FormGroup;
+  title = 'Login'
   constructor(private fb:FormBuilder) {
     this.logingForm = this.fb.group({
       username:null,

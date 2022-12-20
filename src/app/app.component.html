@@ -2,4 +2,53 @@
   <app-auth-form (submited)="login($event)"></app-auth-form>
   <app-auth-form (submited)="createUser($event)"></app-auth-form>
 </div> -->
-<app-tabs></app-tabs>
+<app-tabs  #tabs>
+    <app-tab title="Periodes" #tab1>
+        <table style="width: 100%;" mat-table [dataSource]="dataSource" class="mat-elevation-z2">
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef> Action </th>
+              <td mat-cell *matCellDef="let element">
+                <button mat-icon-button color="accent" (click)="updateTab(element)">
+                    <mat-icon>update</mat-icon>
+                </button>
+            </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <button mat-icon-button color="primary" (click)="addTab()">
+            <mat-icon>add</mat-icon>
+          </button>
+    </app-tab>
+</app-tabs>
+
+<ng-template #tmp let-periode>
+    <app-periode-form [periode]="periode" (onSubmit)="onSubmit($event)"></app-periode-form>
+</ng-template>

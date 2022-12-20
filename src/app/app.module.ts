@@ -7,7 +7,7 @@ import { AngularMaterialModule } from './angular-material.module';
 import { StockInventoryModule } from './stock-inventary/stock-inventory.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './stock-inventary/services/in-memory-data.service';
+// import { InMemoryDataService } from './stock-inventary/services/in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import { InMemoryDataService } from './stock-inventary/services/in-memory-data.s
     StockInventoryModule,
     HttpClientModule,
 
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
   ],
   providers: [],
   bootstrap: [AppComponent]

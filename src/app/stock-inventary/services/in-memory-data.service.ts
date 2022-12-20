@@ -1,8 +1,6 @@
 import { Cart } from './../models/cart.interface';
 import { Product } from './../models/product.interface';
 
-
-
 import { Injectable } from '@angular/core';
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { Observable, of } from 'rxjs';

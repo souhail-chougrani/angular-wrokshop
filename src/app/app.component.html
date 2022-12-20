@@ -1,3 +1,9 @@
 <div class="container">
-  <app-auth-form (submited)="login($event)"></app-auth-form>
+    <!-- <div #entry></div> -->
+    <div [ngTemplateOutlet]="tmp" [ngTemplateOutletContext]="ctx"></div>
 </div>
+
+
+<ng-template #tmp let-name="name" let-nanana>
+    Hi,i'm {{name}} form {{nanana}} 😂😂
+</ng-template>

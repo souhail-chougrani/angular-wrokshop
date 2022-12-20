@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
+import { CardModule } from './card/card.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { AngularMaterialModule } from './angular-material.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

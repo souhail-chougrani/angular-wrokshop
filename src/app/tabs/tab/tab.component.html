@@ -1,6 +1,7 @@
-<div class="tabs__panels" *ngIf="selected">
+<div class="tabs__panels" [hidden]="!selected">
     <!--single panel-->
     <div class="tabs__panel">
-      <ng-content></ng-content>
+      <ng-content *ngIf="!template"></ng-content>
+      <ng-container *ngIf="template" [ngTemplateOutlet]="template" [ngTemplateOutletContext]="{$implicit:context}"></ng-container>
     </div>              
 </div>

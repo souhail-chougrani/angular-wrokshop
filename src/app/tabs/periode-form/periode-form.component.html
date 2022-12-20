@@ -1,0 +1,24 @@
+<form [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <mat-label>Position</mat-label>
+        <input matInput formControlName="position" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Weight</mat-label>
+        <input matInput formControlName="weight" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Symbol</mat-label>
+        <input matInput formControlName="symbol" />
+    </mat-form-field>
+
+    <div>
+    </div>
+</form>
+<button mat-raised-button color="primary" (click)="onSubmit.emit(form.value)">
+    submit
+</button>

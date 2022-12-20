@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-tab',
@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TabComponent implements OnInit {
   @Input() selected:boolean = false;
   @Input() title !: string;
+  @Input() template !:TemplateRef<any>;
+  @Input() context !:any;
+  @Input() isClosable:boolean = false
   constructor() { }
 
   ngOnInit(): void {

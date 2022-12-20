@@ -8,6 +8,7 @@
 
             <!--tabs panels-->
             <ng-content></ng-content>
+            <ng-container #entry></ng-container>
         </div>
     </div>
 </div>
@@ -15,8 +16,10 @@
 <ng-template #defaultHeader>
     <div class="tabs__nav">
         <ul class="tabs__nav-list">
-            <li class="tabs__nav-item" [ngClass]="{'active':tab.selected}" *ngFor="let tab of tabs"
-                (click)="onSelect(tab)">{{tab.title}}</li>
+            <li style="position:relative ;" class="tabs__nav-item" [ngClass]="{'active':tab.selected}" *ngFor="let tab of tabs;let i=index"
+                (click)="onSelect(tab)">{{tab.title}}
+              <span style="position:absolute; top:0; right:0; padding:3px"  *ngIf="tab.isClosable" (click)="onClose(tab,i)">X</span>  
+            </li>
         </ul>
     </div>
 </ng-template>
